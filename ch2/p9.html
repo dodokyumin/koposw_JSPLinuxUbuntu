@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <script>
+        name = prompt("Enter Name","홍길동"); //값을 입력할 수 있는 프롬프트 팝업창을 띄운다. 입력창에는 디폴트로 홍길동, 입력값을 변수name에 저장.
+        if(confirm ("Continue? \nCLick Button") == true){//메서드는 확인과 취소 두 버튼을 가지며 메시지를 지정할 수 있는 모달 대화 상자를 띄웁니다.
+            //만약 true 이면 answer변수에 true담기
+            answer = 'true';
+        } else {//false이면
+            answer = 'false';//만약 true 이면 answer변수에 false담기
+        }
+        alert("Name : " + name + "\nAnswer : " + answer);//알림창에 담았던 변수 띄우기
+        document.write(" Your Name is " + answer);//변수 담아 document에 출력.
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

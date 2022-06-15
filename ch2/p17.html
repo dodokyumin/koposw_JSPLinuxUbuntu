@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function sum(a,b){ //아규먼트 두개를 받는 메소드 생성
+            return a+b;//리턴값으로 두 아규먼트를 더한 값.
+        }
+        
+        function func(){ //JS에만 있는 기능. 굳이 예를 들자면 JAVA의 오버라이딩 비슷한 개념. 딱히 쓰이지는 않는다.
+            var sum = 0; //합을 저장할 변수 sum 초기화설정.
+            for(var i = 0; i < arguments.length; i++){//아규먼트의 길이만큼 돌 변수 i설정
+                sum += func.arguments[i];//js에서는 아규먼트를 자유롭게 받을 수 있다. 즉 자바의 오버로딩과 비슷한 개념
+            }//더하여 값 누적.
+            return sum; //누적한 값을 리턴하여 줌
+        }
+        alert(func(1));//함수에 1을 보내어 받은 리턴 값을 alert메소드로 알림창에 띄워 출력함.
+        // alert(func(1,2));
+        // alert(func(1,2,3));
+        // alert(func(1,2,3,4,5,6,7,8,9,10));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제목줄입니다.</title>
+</head>
+<body>
+    <form method=post name="'fm"><!--폼은 웹페이지 안에 또다른 페이지이며 사용자와 대화할 수 있게 만들어주는 태그이다!-->
+        <table width=650 border=1 cellspacing=0 cellpadding=5><!--테이블 태그로 태그생성하며 각 속성들의 값을 지정해준다.
+        width 너비, border 테두리, cellspacing 칸 안 내용물의 바깥경계선과 테이블테두리의 간격, cellpadding 셀의 패딩 값-->
+            <tr><!--table row 가로줄-->
+                <td><b>번호</b></td><!--table data 셀만들기, bold 두꺼운 선처리-->
+                <td><input type=text name=id size=70 maxlength=70 value=1 readonly>
+                    <!--셀의 인풋 타입 지정하기.-->
+                </td>
+            </tr>
+
+            <tr>
+                <td><b>성별</b></td>
+                <td>
+                    <select name=sex><!--옵션메뉴를 제공하는 드롭다운 리스트이다.-->
+                        <option value='M' selected>남자 <!--드롭다운 초기값은 남자.-->
+                        <option value='W'>여자
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><b>성명</b></td>
+                <td><input type="text" name="name" size="70" maxlength="70" value="레이나"></td>
+                <!--셀의 인풋 타입 지정하기. value는 디폴트로 입력되어있는 값-->
+            </tr>
+            <tr>
+                <td><b>주소</b></td>
+                <td><input type="text" name="addr" size="70" maxlength="70" value="서울시 어딘가 살고 있군"></td>
+                <!--셀의 인풋 타입 지정하기.-->
+            </tr>
+            <tr>
+                <td><b>전화번호</b></td>
+                <td><input type="text" name="tel" size="70" maxlength="70" value=""></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

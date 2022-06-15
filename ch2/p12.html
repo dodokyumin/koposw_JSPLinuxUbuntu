@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        
+        var name = "Hello"; //문자열을 변수에 담기
+        function call1 (){ //인자를 받지 않는 함수 만들기.
+            var name = "world"; //문자열을 변수에 담기
+            document.write("지역:"+name);//document객체에 문자열을 출력
+        }
+
+        function call2 (){ //인자를 받지 않는 함수 만들기.
+            document.write("전역:"+name);//document객체에 문자열을 출력
+        }
+
+    </script>
+
+</head>
+<body>
+    <script>
+        call1();//메소드 부르기
+    </script>
+    <br>
+    <script>
+        call2();//메소드 부르기
+    </script>
+    <br>
+    Good...
+</body>
+</html>

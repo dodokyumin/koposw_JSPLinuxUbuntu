@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //조건식이 들어있는 함수(점수를 받아서 조건식으로 학점 출력)
+        function hakjum(score){//아규먼트를 한개 받는 메소드 학점을 만들었다.
+        document.write("점수 : "+score+"점\n등급 : ") //인자로 받은 스코어를 문자열에 담아 출력
+            if (score>90){ //만약 점수가 90점보다 높을 경우
+                document.write("A등급") //a등급 출력
+            } else if (score>=80){//점수가 80점 이상일 경우
+                document.write("B등급")//b등급 출력
+            } else if (score>=70){//점수가 70점 이상일 경우
+                document.write("C등급")//c등급 출력
+            } else if (score>=60){//점수가 60점 이상일 경우
+                document.write("D등급")//d등급 출력
+            } else {//위 조건들에 포함되지 않을 경우
+                document.write("E등급")//e등급 출력
+            }
+        }
+    </script>
+</head>
+<body>
+    <script>
+        hakjum(Math.floor(Math.random()*101)); //인자로 보낼 아규먼트를 math함수를 통해 랜덤 정수형 값을 보낸다.
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var name = "Hello"; //문자열을 변수에 담기
+
+        function call1(){//아규먼트 받지 않는 함수 생성
+            window.location = "http://www.kopo.ac.kr"; //현재 창에서 지정된 location으로 이동함.
+            //window.status = "Hello, 어디에 표시되나요"; //status는 요즘 브라우저에서 보안상의 이유로 안된다고 함.
+            //window.open("http://www.kopo.ac.kr","newWindow","toolbar=yes, width=200"); //window.open새로운 창(옵션이 적용된)에서 해당 url로 이동한다.
+        }
+    </script>
+</head>
+
+<body>
+    <script>call1();</script> <!--함수 호출하기-->
+    Good...
+</body>
+
+</html>

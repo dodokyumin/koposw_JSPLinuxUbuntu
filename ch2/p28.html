@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <!--자바스크립트 파일 경로를 src에 넣어 직접 받아와 import할 수 있게 만들어주었다.-->
+    <canvas id="myChart"></canvas>
+    <!--캔버스 요소는 HTML5의 일부로서 2차원 모양과 비트맵 그림의 스크립트 작성이 가능한 동적 렌더링을 허용한다. -->
+</head>
+
+<body>
+    <canvas id="myChart" width="400" height="400"></canvas>
+    <!--캔버스에 id width height 값 설정해주기.-->
+    <script>
+        const rand1 = Math.floor(Math.random() * 99 +1); //각 바에 표현할 점수들을 랜덤으로 돌려 실시간 자동 변경이 가능하게 만들어주었다.
+        const rand2 = Math.floor(Math.random() * 99 +1); 
+        const rand3 = Math.floor(Math.random() * 99 +1); 
+        const rand4 = Math.floor(Math.random() * 99 +1); 
+        const rand5 = Math.floor(Math.random() * 99 +1); 
+        const rand6 = Math.floor(Math.random() * 99 +1); 
+        const rand7 = Math.floor(Math.random() * 99 +1); 
+        const rand8 = Math.floor(Math.random() * 99 +1); 
+        const rand9 = Math.floor(Math.random() * 99 +1); 
+        const rand10 = Math.floor(Math.random() * 99 +1); 
+        const rand11 = Math.floor(Math.random() * 99 +1); 
+        const rand12 = Math.floor(Math.random() * 99 +1); 
+        const rand13 = Math.floor(Math.random() * 99 +1); 
+        const rand14 = Math.floor(Math.random() * 99 +1); 
+        const rand15 = Math.floor(Math.random() * 99 +1); 
+        const rand16 = Math.floor(Math.random() * 99 +1); 
+        const rand17 = Math.floor(Math.random() * 99 +1); 
+        const rand18 = Math.floor(Math.random() * 99 +1); 
+        const rand19 = Math.floor(Math.random() * 99 +1); 
+        const rand20 = Math.floor(Math.random() * 99 +1); 
+
+        var ctx = document.getElementById("myChart").getContext('2d');
+        //document에서 myChart로 id를 설정해두었던 캔버스를 getElementById로 불러와 getContext메소드를 인자값 2d로 넣어 호출하였다.
+        var myChart = new Chart(ctx, { //차트 생성.
+            type: 'bar',
+            data: {
+                labels: ["규민1", "규민2", "규민3", "규민4", "규민5", "규민6", "규민7","규민8", "규민9", "규민10",
+                "규민11", "규민12", "규민13", "규민14", "규민15", "규민16", "규민17","규민18", "규민19", "규민20"],
+                //그래프에서 세로 바 한개씩 맡을 이름 리스트 생성.
+                datasets: [{
+                    label: '# 시험 점수',//그래프 페이지 이름을 라벨로 붙여준다.
+                    data: [rand1, rand2, rand3, rand4, rand5, rand6, rand7, rand8, rand9, rand10,
+                    rand11, rand12, rand13, rand14, rand15, rand16, rand17, rand18, rand19, rand20],
+                    //바 갯수 20개에 맞추어 설정했던 랜덤 점수값들을 데이터 리스트에 담아준다.
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(239, 222, 222, 0.2)',
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(239, 222, 222, 0.2)',
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)',
+                        'rgba(244, 222, 222, 1)',
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)',
+                        'rgba(244, 222, 222, 1)',
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ], //바의 백그라운드와 테두리 색깔을 rgb 16진수로 각각 설정을 해주었다.
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

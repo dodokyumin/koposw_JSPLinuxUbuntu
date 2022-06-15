@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        for(i=0; i<10; i++){//for반복문을 돌 변수i. 자료형이나 변수선언 필요 없음.
+            document.write(i);//매 값을 출력
+        }
+    </script>
+    
+    <script>
+        var obj = new Array ("나연","정연","모모","사나"); //obj변수에 배열 담기
+        answer = "";//출력할 문자열 변수 만들어주기.
+        for(j in obj){//변수j가 해당 배열을 돌며 각각의 요소들의 값을 할당받는다.
+            answer += " " + j + ":" + obj[j];   //출력할 문자열 변수에 반복문을 돌며 값 할당받는 j 넣어주기.
+        }
+        document.write("<h1>"+answer+"</h1>");//설정한 변수answer값을 도큐먼트에 출력
+    </script>
+
+    <script>
+        document.write("<H2> 구구단 </H2>");//구구단 찍기
+        document.write("<TABLE border=0 width=100%>");//자바에서 document로 보내는 것은 결국 body에 보내는 것과 같음
+        for(var i=1; i<10; i=i+3){//for문을 돌 변수 i설정, 가로로 3씩 증가.
+            for(var j = 1; j<10; j++){//구구단의 두번째 줄 만들기
+                document.write("<TR>");//Table Data 가로 셀 만들기
+                document.write("<TD>"+ i + " * " + j + "=" + i*j + "</TD>"); //구구단 출력  n단
+                document.write("<TD>"+ (i+1) + " * " + j + "=" + (i+1)*j + "</TD>");//구구단 출력  n+1단
+                document.write("<TD>"+ (i+2) + " * " + j + "=" + (i+2)*j + "</TD>");//구구단 출력  n+2단
+                document.write("</TR>");
+            }
+            document.write("<tr><td colspan=3><hr></td></tr>"); //테이블 하이라이트 출력.
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var name="Hello";
+        function call1(){
+            window.location = "http://naver.com";
+            //현재 창에서 지정된 location으로 이동함.
+        }
+
+        function callHref() {
+            window.location.href = "http://daum.net";
+            //href 는 location 객체에 속해있는 프로퍼티로 현재 접속중인 페이지 정보를 갖고 있음 
+            //또한 값을 변경할 수 있는 프로퍼티이기 때문에 다른 페이지로 이동할 수 있음.
+        }
+
+        function callPort(){
+            var port = location.port;
+            document.write("현 url의 포트 번호 : " + port +"<br>");
+            //URL의 포트 번호를 리턴함. 만약 포트 번호가 80인 경우 아무것도 리턴하지 않는다.
+        }
+
+        function callHostname(){
+            var hostname = location.hostname;
+            document.write("현 url의 호스트 네임 : " + hostname +"<br>");
+            //URL의 호스트 네임을 리턴함. ex naver.com
+        }
+
+        function callHash(){
+            var hash = location.hash;
+            document.write("현 anchor 부분(#) : " + hash +"<br>");
+            //URL의 anchor 부분(#)을 리턴함. 
+        }
+
+        function callProtocol(){
+            var protocol = location.protocol;
+            document.write("현 url의 프로토콜 : " + protocol +"<br>");
+            //URL의 프로토콜을 리턴함. ex http
+        }
+
+    </script>
+</head>
+<body>
+    <script>
+        //call1();
+        //callHref();
+        callPort();
+        callHostname();
+        callHash();
+        callProtocol();
+    </script><br>
+    Good....
+    
+</body>
+</html>
